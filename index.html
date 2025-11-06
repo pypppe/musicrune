@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musicrune</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<link rel="icon" type="image/x-icon" href="image/favicon.ico">
+<body>
+<!-- Fixed top logo -->
+<div class="fixed-logo">
+    <img src="image/logo.png" alt="Musicrune Logo">
+    <p class="takedown-note">Email py@astrarune.com to take down your music.</p>
+</div>
+
+
+    <div class="container">
+        <!-- Sidebar with song list -->
+        <aside class="sidebar">
+            <h1>Musicrune</h1>
+
+            <!-- Songs -->
+            <div class="song" data-src="music/dawn.mp3">
+                <p class="song-title">Dawn of the DOORS</p>
+                <p class="song-artist">By LSplash</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/elev.mp3">
+                <p class="song-title">Elevator Jam</p>
+                <p class="song-artist">By LSplash</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/jeff.mp3">
+                <p class="song-title">Jeff's Jingle</p>
+                <p class="song-artist">By LSplash</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/shop.mp3">
+                <p class="song-title">The Shop</p>
+                <p class="song-artist">By LSplash</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/birch.mp3">
+                <p class="song-title">Son Of A Birch</p>
+                <p class="song-artist">By LSplash</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/invicible.mp3">
+                <p class="song-title">Invicible</p>
+                <p class="song-artist">By NCS</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/skyhigh.mp3">
+                <p class="song-title">Skyhigh</p>
+                <p class="song-artist">By NCS</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/firefly.mp3">
+                <p class="song-title">Firefly</p>
+                <p class="song-artist">By NCS</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/heckcat.mp3">
+                <p class="song-title">Hellcat</p>
+                <p class="song-artist">By NCS</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+
+            <div class="song" data-src="music/popsicle.mp3">
+                <p class="song-title">Popsicle</p>
+                <p class="song-artist">By NCS</p>
+                <div class="controls">
+                    <button class="play-btn">Play</button>
+                    <button class="loop-btn">Loop</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content with now playing -->
+        <main class="main-content">
+            <div class="now-playing">
+                <p id="np-title">Nothing Playing</p>
+                <p id="np-artist"></p>
+
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+
+                <div class="player-controls">
+                    <button id="prev-btn">⏮</button>
+                    <button id="play-pause-btn">▶️</button>
+                    <button id="next-btn">⏭</button>
+                    <button id="loop-main-btn">🔁</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
