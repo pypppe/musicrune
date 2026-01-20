@@ -25,10 +25,10 @@ function updateTime() {
 function togglePlayPause() {
     if (audio.paused && audio.src) {
         audio.play().catch(err => console.log(err));
-        playPauseBtn.textContent = '⏸️';
+        playPauseBtn.textContent = '❚❚';
     } else {
         audio.pause();
-        playPauseBtn.textContent = '▶️';
+        playPauseBtn.textContent = '▶︎';
     }
 }
 
@@ -56,7 +56,7 @@ function playSong(index) {
     loopMainBtn.classList.remove('active');
 
     audio.play().catch(err => console.log(err));
-    playPauseBtn.textContent = '⏸️';
+    playPauseBtn.textContent = '❚❚';
 
     npTitle.style.opacity = 0;
     npArtist.style.opacity = 0;
@@ -141,3 +141,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
