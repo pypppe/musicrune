@@ -121,3 +121,19 @@ volumeSlider.addEventListener('input', () => {
     audio.volume = volumeSlider.value;
 });
 
+const searchInput = document.getElementById('song-search');
+const songs = document.querySelectorAll('.song');
+
+searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase();
+
+    songs.forEach(song => {
+        const text = song.innerText.toLowerCase();
+        
+        if (text.includes(filter)) {
+            song.style.display = "flex"; 
+        } else {
+            song.style.display = "none";
+        }
+    });
+});
