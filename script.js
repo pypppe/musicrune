@@ -121,19 +121,23 @@ volumeSlider.addEventListener('input', () => {
     audio.volume = volumeSlider.value;
 });
 
-const searchInput = document.getElementById('song-search');
-const songs = document.querySelectorAll('.song');
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('song-search');
+    const songCards = document.querySelectorAll('.song');
 
-searchInput.addEventListener('input', () => {
-    const filter = searchInput.value.toLowerCase();
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
 
-    songs.forEach(song => {
-        const text = song.innerText.toLowerCase();
-        
-        if (text.includes(filter)) {
-            song.style.display = "flex"; 
-        } else {
-            song.style.display = "none";
-        }
-    });
+            songCards.forEach(card => {
+                const content = card.textContent.toLowerCase();
+                
+                if (content.includes(query)) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    }
 });
